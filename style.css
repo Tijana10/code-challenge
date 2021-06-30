@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+:root {
+    --red: #6d2e46;      /* rgb(109, 46, 70) */
+    --orange: #a26769;   /* rgb(162, 103, 105) */
+    --vanila: #d5b9b2;   /* rgb(213, 185, 178) */
+    --body: #ece2d0;     /* rgb(236, 226, 208) */
+    --white: #fff;
+    --text: #333;
+}
+
+/********
+BASIC STYLES
+*******/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--body);
+    color: var(--text);
+    line-height: 1.7;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+button {
+    padding: 15px 30px;
+    background: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    border: none;
+    transition: .3s ease;
+}
+button:hover {
+    background: var(--white);
+    color: var(--red);
+    cursor: pointer;
+}
+.clearfix {
+    clear: both;
+}
+
+
+/********
+HEADER
+********/
+header {
+    position: relative;
+    background-image: linear-gradient(rgba(162, 103, 105,.7), rgba(213, 185, 178,.9)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+   
+}
+header div.header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center; 
+}
+div.header i {
+    padding-top: 30px;
+    font-size: 3rem;
+    color: var(--red);
+}
+h1 {
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 300;
+}
+div.header p {
+    padding-bottom: 20px;
+    
+}
+.program {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+.program div {
+    width: 25%;
+    float: left;
+    padding-left: 23px;
+    padding-bottom: 20px;
+}
+
+.program div:first-child p {
+    padding-bottom: 0;
+}
+.program div h3 {
+    font-size: 1.8rem;
+}
+.program div i {
+    font-size: 2.8rem;
+    color: var(--red);
+}
+.program div i:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+.program button {
+    margin-bottom: 50px;
+}
+
+/********
+BOOKS
+********/
+.books {
+    background: var(--orange);
+    padding-bottom: 50px;
+}
+.books h3, p.naslov {
+    text-align: center;
+    color: var(--white);
+}
+.books h3 {
+    font-size: 1.7rem;
+    padding-top: 30px;
+}
+.books p.naslov {
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+.books img {
+    width: 100%;
+}
+.boo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.boo div {
+    flex: 0 0 50%;
+    padding: 20px;
+}
+.boo div p {
+    color: var(--white);
+    text-align: justify;
+    
+}
+
+/*******
+BLOG
+********/
+.blog h3 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 2rem;
+}
+.blog p.naslov1 {
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+.blog1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.blog1 img {
+    width: 100%;
+}
+.blog1 div {
+    flex: 1;
+    padding: 20px;
+}
+.blog1 div button {
+   position: relative;
+   left: 50%;
+   transform: translate(-50%);
+   margin: 40px 0;
+}
+.blog1 div p {
+    text-align: center;
+}
+
+/********
+FOOTER
+********/
+footer {
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+}
+footer span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/*********
+RESPONSIVE
+********/
+@media(max-width: 767px) {
+    header {
+        height: 170vh;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    div.header i {
+        font-size: 2rem;
+    }
+    .program div {
+        width: 100%; 
+        padding: 0;
+    }
+    .boo div {
+       flex: 0 0 100%;
+   }
+    .boo div p {
+    text-align: center; 
+    }
+   .blog1 div {
+       flex: 0 0 100%;
+   }
+}
